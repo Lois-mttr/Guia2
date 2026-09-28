@@ -1,3 +1,5 @@
+# GUÍA ACADÉMICA BACKEND SERVICIOS WEB Y ARQUITECT - Realizado por Luisa Téllez y Stephanie Tenorio
+
 # SISTESIS-UNI
 
 En este proyecto desarrollo una implementación práctica basada en la guía académica **Backend, Servicios Web y Arquitectura de APIs**.
