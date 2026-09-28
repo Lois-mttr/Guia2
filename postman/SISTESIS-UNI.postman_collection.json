@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "SISTESIS-UNI - API de Tesis",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {"key": "baseUrl", "value": "http://localhost:8080"},
+    {"key": "tesisId", "value": "1"}
+  ],
+  "item": [
+    {
+      "name": "GET - Listar tesis",
+      "request": {"method": "GET", "url": "{{baseUrl}}/api/tesis.php"}
+    },
+    {
+      "name": "POST - Crear tesis",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\n  \"titulo\": \"IA en Medicina\",\n  \"descripcion\": \"Uso de redes neuronales\",\n  \"estudiante_id\": 1\n}"},
+        "url": "{{baseUrl}}/api/tesis.php"
+      }
+    },
+    {
+      "name": "PUT - Actualizar estado",
+      "request": {
+        "method": "PUT",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\n  \"estado\": \"aprobado\"\n}"},
+        "url": "{{baseUrl}}/api/tesis.php?id={{tesisId}}"
+      }
+    },
+    {
+      "name": "DELETE - Eliminar tesis",
+      "request": {"method": "DELETE", "url": "{{baseUrl}}/api/tesis.php?id={{tesisId}}"}
+    }
+  ]
+}
